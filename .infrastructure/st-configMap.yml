@@ -5,7 +5,7 @@ metadata:
   namespace: mysql
 data:
   init.sql: |
-    GRANT ALL PRIVILEGES ON todoapp.* TO 'user'@'%';
-    CREATE DATABASE IF NOT EXISTS todoapp;
-    CREATE USER IF NOT EXISTS 'user'@'%' IDENTIFIED BY '1234';
+    CREATE DATABASE IF NOT EXISTS todoappdb;
+    CREATE USER IF NOT EXISTS 'todoappuser'@'%' IDENTIFIED BY '1234';
+    GRANT ALL PRIVILEGES ON todoappdb.* TO 'todoappuser'@'%';
     FLUSH PRIVILEGES;

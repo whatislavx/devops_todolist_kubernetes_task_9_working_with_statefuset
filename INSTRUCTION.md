@@ -18,7 +18,7 @@ chmod +x bootstrap.sh
 
 ```
 kubectl get all -n mysql
-kubectl get all -n todo-app
+kubectl get all -n todoapp
 ```
 
 ### 1. Статус подів
@@ -26,12 +26,12 @@ kubectl get all -n todo-app
 
 ```
 kubectl get pods -n mysql
-kubectl get pods -n todo-app
+kubectl get pods -n todoapp
 ``` 
 
 ### 2. Перевірка з'єднання з базою
 
-Перевірте, що ToDo застосунок може підключитися до MySQL бази даних. Для цього перегляньте логи подів застосунку:
+Перевірте, що ToDo застосунок може підключитись до MySQL бази даних. Для цього перегляньте логи подів застосунку:
 
 ```
 kubectl logs -l app=todoapp -n todoapp
