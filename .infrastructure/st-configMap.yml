@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config
+  namespace: mysql
+data:
+  init.sql: |
+    GRANT ALL PRIVILEGES ON todoapp.* TO 'user'@'%';
+    CREATE DATABASE IF NOT EXISTS todoapp;
+    CREATE USER IF NOT EXISTS 'user'@'%' IDENTIFIED BY '1234';
+    FLUSH PRIVILEGES;
